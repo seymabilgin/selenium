@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
+import java.util.List;
 
 public class C02_DropDownMenu {
  /*
@@ -72,10 +73,38 @@ public class C02_DropDownMenu {
 
     }
 
+    @Test
+   public void test02() {
+       // 2.Method:
+       // a. Tüm eyalet isimlerini yazdıralım
+
+        WebElement eyaletler= driver.findElement(By.cssSelector("#state"));
+   Select select =new Select(eyaletler);
+        List<WebElement> eyaletlerListesi =select.getOptions();
+
+        //1.yol
+        for(WebElement w: eyaletlerListesi){ //w yerine each yazanlarda oluyor
+
+            System.out.println(w.getText());
+        }
+
+        //2.yol Lambda ile cocumu
+        eyaletlerListesi.forEach(t-> System.out.println(t.getText()));
+
+
+
+
+    }
+
+    @Test
+   public void test03() {
+
+    }
+
     @AfterEach
     public void tearDown() throws InterruptedException {
         Thread.sleep(5000);
-        //  driver.quit();
+        driver.quit();
     }
 
 

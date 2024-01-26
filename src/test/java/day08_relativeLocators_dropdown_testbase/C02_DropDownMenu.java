@@ -1,6 +1,7 @@
 package day08_relativeLocators_dropdown_testbase;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -34,7 +35,7 @@ public class C02_DropDownMenu {
        1.Method:
            a. Yil,ay,gün dropdown menu'leri locate ediniz
            b. Select objesi olustur
-           c. Select object i kullaarak 3 farkli sekilde secim yapiniz
+           c. Select object i kullanarak 3 farkli sekilde secim yapiniz
        2.Method:
            a. Tüm eyalet isimlerini yazdıralım
        3.Method:
@@ -75,29 +76,54 @@ public class C02_DropDownMenu {
 
     @Test
    public void test02() {
-       // 2.Method:
-       // a. Tüm eyalet isimlerini yazdıralım
+        // 2.Method:
+        // a. Tüm eyalet isimlerini yazdıralım
 
-        WebElement eyaletler= driver.findElement(By.cssSelector("#state"));
-   Select select =new Select(eyaletler);
-        List<WebElement> eyaletlerListesi =select.getOptions();
+        WebElement eyaletler = driver.findElement(By.cssSelector("#state"));
+        Select select = new Select(eyaletler);
+        List<WebElement> eyaletlerListesi = select.getOptions();
 
         //1.yol
-        for(WebElement w: eyaletlerListesi){ //w yerine each yazanlarda oluyor
+        for (WebElement w : eyaletlerListesi) { //w yerine each yazanlarda oluyor
 
             System.out.println(w.getText());
         }
 
         //2.yol Lambda ile cocumu
+        eyaletlerListesi.forEach(t -> System.out.println(t.getText()));
+    }
+    //Trick bunlar alternatifler select objesini olusturmadan kullanabiliriz
+    @Test
+    public void test03() {
+        // a. Tüm eyalet isimlerini yazdıralım
+        List<WebElement> eyaletlerListesi= driver.findElements(By.xpath("//select[@id='state']/option"));
         eyaletlerListesi.forEach(t-> System.out.println(t.getText()));
-
-
-
-
     }
 
     @Test
-   public void test03() {
+    public void test04() {
+        //           a. Yil,ay,gün dropdown menu'leri locate ediniz
+        WebElement year = driver.findElement(By.id("year"));
+        WebElement month = driver.findElement(By.id("month"));
+        WebElement day = driver.findElement(By.id("day"));
+
+        //           b. Select objesi olustur
+        //           c. Select object i kullaarak 3 farkli sekilde secim yapiniz
+        year.sendKeys("2022");
+        month.sendKeys("May");
+        day.sendKeys("13");
+        // cogu zaman dropdown web elementine send keys methodu ile alt basliklardan bir secim yaptirabaliriz
+    }
+
+    @Test
+    public void test05() {
+
+        // a. State dropdownindaki varsayilan secili secenegin 'Select a State' oldugunu verify edelim
+        WebElement eyaletler =  driver.findElement(By.cssSelector("#state"));
+        Select select = new Select(eyaletler);
+        String actualOption = select.getFirstSelectedOption().getText();
+        String expectedOption = "Select a State";
+        Assertions.assertEquals(expectedOption,actualOption);
 
     }
 

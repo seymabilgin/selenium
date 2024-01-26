@@ -17,17 +17,25 @@ public class practice {
 
 WebDriver driver;
     @BeforeAll
-    static void beforeAll() {
-        System.out.println("@BeforeAll: tüm kodlar calismaya basladi");
+   public static void beforeAll() {
+        System.out.println("Tüm kodlar calısmaya basladı");
+
     }
 
     @BeforeEach
-    void setUp() {
-        driver =new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+   public void setUp() {
+        driver=new ChromeDriver();
+     driver.manage().window().maximize();
+     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
     }
 
+    @Test
+   public void test01() {
+driver.get("https://www.google.com/");
+String actualTitle=driver.getTitle();
+String expectedTitle="Google";
+Assertions.assertEquals(expectedTitle,actualTitle);
 
+    }
 }

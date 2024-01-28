@@ -30,7 +30,7 @@ public abstract class TestBase {
 
     @AfterEach
    public void tearDown() {
-        driver.quit();
+       // driver.quit();
     }
     //Hard wait
     public void waitForSecond(int second){
@@ -52,7 +52,10 @@ public void selectIndex(WebElement ddm, int idx){
     select.selectByIndex(idx);
 
 }
-
+    //index ile windowa gecis yapma
+    public void switchToWindow(int index){
+        driver.switchTo().window(driver.getWindowHandles().toArray()[index].toString());
+    }
 
 }
 

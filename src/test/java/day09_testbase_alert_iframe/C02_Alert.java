@@ -44,10 +44,10 @@ Bir metod olusturun: sendKeysAlert
 
        // Bir metod olusturun: acceptAlert
         driver.get("https://testcenter.techproeducation.com/index.php?page=javascript-alerts");
-        waitForSecond(2);
+
        // birinci butona tıklayın,
         driver.findElement(By.xpath("//button[@onclick='jsAlert()']")).click();
-        waitForSecond(1);
+
         //  uyarıdaki OK butonuna tıklayın
         driver.switchTo().alert().accept();
        // result mesajının  "You successfully clicked an alert" oldugunu test edin.

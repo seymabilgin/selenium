@@ -17,7 +17,7 @@ public class C01_WindowHandle extends TestBase {
     1- driver.switchTo().newWindow(WindowType.WINDOW) ==> yeni bir pencere acar ve driveri buraya gecis yaptirir
     2- driver.switchTo().newWindow(WindowType.TAB) ==> yeni bir sekme acar ve driveri buraya gecis yaptirir
 
-    eger hadle degeri ile bir sayafaya gecis yapmak istersek bu defada driver.switchTo().window() methodunu kullaniriz ve parantez icinde
+    eger handle degeri ile bir sayafaya gecis yapmak istersek bu defa da driver.switchTo().window() methodunu kullaniriz ve parantez icinde
     gecis yapmak istedigimiz sayfanin handle degerini belirtiriz
      */
     @Test

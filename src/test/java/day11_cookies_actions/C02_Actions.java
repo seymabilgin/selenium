@@ -22,6 +22,7 @@ public class C02_Actions extends TestBase {
         //Kutuya sag tıklayın
         actions.contextClick(box).perform();
 
+
         //Alert'te cikan yazinin"You selected a context menu"oldugunu test edin
 
        String  actualResult= driver.switchTo().alert().getText();

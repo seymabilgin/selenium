@@ -28,7 +28,7 @@ public class C01_RelativeLocators {
         //Berlin'i relative locator ile locate edin
 
   WebElement berlin = driver.findElement(with(By.tagName("img")).below(NYC).toLeftOf(Bay_Area));
-  // indexlerin kayma ihtimali vardır bu yönden bunu kullanmanın avantajı vardır. readable dır. Bu yöntemler çok kullanılmaz
+  // indexlerin kayma ihtimali vardır bu yönden burada index kullanılmadığı icin bunu kullanmanın avantajı vardır. readable dır. Bu yöntemler çok kullanılmaz
 
         //Relative locator'larin dogru calistigini test edin
       String actualIDValue = berlin.getAttribute("id");

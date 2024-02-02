@@ -23,11 +23,12 @@ public class C01_Cookies extends TestBase {
        Set<Cookie> cookieSet= driver.manage().getCookies();
         System.out.println("cookieSet = " + cookieSet);
         int counter=1;
-        for (Cookie w: cookieSet){
-            System.out.println(counter+"  .cookie ==> "+ w);
-            System.out.println(counter+"  .cookie Name ==> "+ w.getName());
-            System.out.println(counter+"  .cookie Value ==> "+ w.getValue());
-
+        for ( Cookie  w : cookieSet){
+            System.out.println(counter+ " . cookie ==>  " + w);
+            System.out.println(counter+ " . cookie ==>  " + w.getName());
+            System.out.println(counter+ " . cookie ==>  " + w.getValue());
+            System.out.println("==========================================");
+            counter++;
         }
         //3-Sayfadaki cookies sayisinin 5’den buyuk oldugunu test edin
         int actualSize=cookieSet.size();

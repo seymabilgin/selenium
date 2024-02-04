@@ -1,0 +1,17 @@
+
+O
+java:S2699"-Add at least one assertion to this test case.(’è“Ëıÿÿÿÿ8‹òÃÖ1
+O
+java:S2699+"-Add at least one assertion to this test case.(©¶‹Êùÿÿÿÿ8ŒòÃÖ1
+±
+java:S3577
+"“Rename class "C01_ActionsClassWork" to match the regular expression: '^((Test|IT)[a-zA-Z0-9_]+|[A-Z][a-zA-Z0-9_]*(Test|Tests|TestCase|IT|ITCase))$'(‘µÖ8òÃÖ1
+@
+java:S5786"Remove this 'public' modifier.(’è“Ëıÿÿÿÿ8òÃÖ1
+@
+java:S5786"Remove this 'public' modifier.(²œÿøøÿÿÿÿ8òÃÖ1
+@
+java:S5786+"Remove this 'public' modifier.(©¶‹Êùÿÿÿÿ8òÃÖ1
+;
+java:S5786
+"Remove this 'public' modifier.(‘µÖ8òÃÖ1

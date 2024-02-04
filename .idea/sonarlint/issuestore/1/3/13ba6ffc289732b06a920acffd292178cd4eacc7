@@ -1,0 +1,13 @@
+
+O
+java:S2699"-Add at least one assertion to this test case.(’è“Ëıÿÿÿÿ8ï¨€¢Ö1
+O
+java:S2699("-Add at least one assertion to this test case.(²œÿøøÿÿÿÿ8ßƒ¥Ö1
+«
+java:S3577	"ˆRename class "C04_Faker" to match the regular expression: '^((Test|IT)[a-zA-Z0-9_]+|[A-Z][a-zA-Z0-9_]*(Test|Tests|TestCase|IT|ITCase))$'(Æäºøÿÿÿÿ8ñ¨€¢Ö1
+@
+java:S5786"Remove this 'public' modifier.(’è“Ëıÿÿÿÿ8ñ¨€¢Ö1
+@
+java:S5786("Remove this 'public' modifier.(²œÿøøÿÿÿÿ8ò¨€¢Ö1
+@
+java:S5786	"Remove this 'public' modifier.(Æäºøÿÿÿÿ8ò¨€¢Ö1

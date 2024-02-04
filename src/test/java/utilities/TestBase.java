@@ -9,6 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.List;
 
@@ -33,7 +36,7 @@ public abstract class TestBase {
 
     @AfterEach
    public void tearDown() {
-       driver.quit();
+      // driver.quit();
     }
     //Hard wait
     public void waitForSecond(int second){
@@ -89,9 +92,43 @@ public void sizeTest(int sayı){
         public void switchToWindow ( int index){
             driver.switchTo().window(driver.getWindowHandles().toArray()[index].toString());
         }
+    //File Upload Robot Class
+    public void uploadFilePath(String dosyaYolu) {
+        /*
 
+StringSelection sınıfı, Java'da bir metin dizisini bir Transferable nesnesine dönüştürmek için kullanılan bir sınıftır.
+ Bu, genellikle metin verilerini panoya kopyalamak veya yapıştırmak gibi işlemlerde kullanılır.
+Bu sınıf, Java'nın "Java AWT" (Abstract Window Toolkit) paketinde bulunan java.awt.datatransfer paketinde yer almaktadır.
+Bu sınıfın temel amacı, bir metin dizisini içeren bir StringSelection nesnesi oluşturarak,
+bu nesneyi bir transferable nesnesine dönüştürmektir. Ardından, bu transferable nesnesini kullanarak,
+metni panoya kopyalama veya panodan yapıştırma işlemlerini gerçekleştirebilirsiniz.
+         */
+        try {
+            waitForSecond(3); // 3 saniye bekletir. Bu, kodun başka işlemler için hazır olmasını sağlar.
+            StringSelection stringSelection = new StringSelection(dosyaYolu);
+            //Verilen Dosya yolunu bir StringSelection objectine dönüştürürüz
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+            //verilen stringSelection'i (bu durumda dosya yolu), daha sonra başka bir yere yapıştırmak üzere sistem panosuna kopyalamaktır.
+            Robot robot = new Robot();
+            // Robot sınıfından bir object olustururuz, Bu class javadan gelir ve klavye ve mouse etkileşimlerini simüle eder.
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            // CTRL+V tuslarina basar dolayisiyla panodaki veriyi yapıştırır.
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.keyRelease(KeyEvent.VK_V);
+            // CTRL ve V tuşlarından elini kaldirir
+            robot.delay(3000);
+            // 3 saniye bekler, bu süre içerisinde yapıştırılan verinin işlenmesini sağlar.
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            // ENTER tuşuna basarak yapıştırma işlemini onaylar veya diyalog penceresini kapatır.
+            robot.delay(3000);
+            // Sonraki işlemler için ek 3 saniye bekler.
+        } catch (Exception ignored) {
+            // Herhangi bir hata oluşursa, bu hata yoksayılır.
+        }
 
-
+    }
 }
 
 

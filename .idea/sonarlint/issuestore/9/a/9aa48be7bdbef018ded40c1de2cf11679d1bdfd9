@@ -1,0 +1,15 @@
+
+I
+java:S2699"-Add at least one assertion to this test case.(‰¦ÿ(8ÂÀŸÙ1
+J
+java:S2699*"-Add at least one assertion to this test case.(àä¼Û8ÅÀŸÙ1
+¨
+java:S3577
+"ŒRename class "C02_ReadExcel" to match the regular expression: '^((Test|IT)[a-zA-Z0-9_]+|[A-Z][a-zA-Z0-9_]*(Test|Tests|TestCase|IT|ITCase))$'(æíãöûÿÿÿÿ
+3
+java:S5786"Remove this 'public' modifier.(‰¦ÿ(
+4
+java:S5786*"Remove this 'public' modifier.(àä¼Û
+9
+java:S5786
+"Remove this 'public' modifier.(æíãöûÿÿÿÿ

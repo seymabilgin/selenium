@@ -12,6 +12,7 @@ import java.awt.event.KeyEvent;
 public class C04_Robot extends TestBase {
     @Test
  public void test01() throws AWTException {
+
 /*Robot class java ya ait bir classdır. Driver mızın windows uygulamalarında gezinmesini sağlar.
 (Actions class selenium a ait bir classtır.Robot class ile actions class işlev olarak benzerlik gösterir */
   /*
@@ -43,7 +44,7 @@ public class C04_Robot extends TestBase {
         driver.findElement(By.id("pickfiles")).click();
          waitForSecond(2);
 
-       String dosyaYolu=System.getProperty("user.home")+"Desktop\\Batch 210upload.pdf";
+       String dosyaYolu=System.getProperty("user.home")+"Desktop\\Batch210.txt";
        uploadFilePath(dosyaYolu);
 
         //   dosyanin basariyla yuklendigini test edilir

@@ -37,7 +37,7 @@ public class C02_FileDownload extends TestBase {
 
         String dosyaYolu = System.getProperty("user.home") + "\\Downloads\\b10 all test cases, code.docx";
 
-//dosya önceden indirmişse try-catch ile öncesinde ortam temizligi yapıyoruz
+   //dosya önceden indirmişse try-catch ile öncesinde ortam temizligi yapıyoruz
 
 
         try {

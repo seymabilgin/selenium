@@ -369,3 +369,15 @@ G.idea/sonarlint/issuestore/a/4/a444f69217cc4ee885a5cc3a11485351b167c2eb,0\d\0d
 Q.idea/sonarlint/securityhotspotstore/e/5/e53022e95dabe63d007ac9c2ef635e85b7ff66f4,1\4\147ac5e438df9ca2df91e6727c5a7f0b86a7892f
 Å
 Q.idea/sonarlint/securityhotspotstore/5/8/58cc41b3f2cb545c5d35e1aebb6681db9d67f55c,8\f\8f9a4b9b32cda70c65d2fdc8ee6717242204145b
+f
+6src/test/java/day19_jsexecutor_log4j/C01_jsScroll.java,2\2\2294a53df782f11ac447bd7090263d6f719e9662
+l
+<src/test/java/day19_jsexecutor_log4j/C02_JSSetAttribute.java,d\b\dba7f4c5556c16659f50ed2bef4329de6ca272ef
+f
+6src/test/java/day19_jsexecutor_log4j/C03_JsLocate.java,b\b\bb4d62ac3e5287deae9ecdecc1c9132cc54caed1
+c
+3src/test/java/day19_jsexecutor_log4j/C04_Log4j.java,b\3\b37379b6d0cdb0a9a3e4b436d303d4f052051deb
+<
+selenium.log,d\7\d728d212e202c272f887fb2bcdeaed531ee795ff
+b
+2src/test/java/day19_jsexecutor_log4j/practice.java,0\a\0af82a9cb912d23d1c18d3e41fdf454c94f44e5f

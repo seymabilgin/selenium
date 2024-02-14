@@ -222,6 +222,35 @@ public void jsClick(WebElement element){
 
 }
 
+//JSExecutor Scroll WebElement Methodu
+
+    public void jsScroll(WebElement webElement){
+        JavascriptExecutor js =(JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true)",webElement);
+    }
+
+  //JSExecutor scrollEnd
+  public void jsScrollEnd(){
+      JavascriptExecutor js = (JavascriptExecutor) driver;
+      js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+  }
+
+
+    //JSExecutor scrollHome
+    public void jsScrollHome(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0,-document.body.scrollHeight)");
+    }
+
+   //JSExecutor SendKeys
+   //JSExecutor SendKeys
+   public void jsSendKeys(WebElement element, String value){
+       JavascriptExecutor js = (JavascriptExecutor) driver;
+       js.executeScript("arguments[0].value='"+value+"'",element);
+   }
+
+
+
 
 
 }

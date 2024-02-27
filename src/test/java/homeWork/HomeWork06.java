@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -168,14 +169,16 @@ public class HomeWork06 extends TestBase {
 
         // File Downloads a tiklayiniz
         WebElement fileDownload=driver.findElement(By.cssSelector("#download"));
-        action.scrollToElement(fileDownload).perform();
-        waitForSecond(1);
+       // action.scrollToElement(fileDownload).perform();
+
         fileDownload.click();
 
        // Acilan sayfada Server Download a tiklayiniz
         driver.findElement(By.id("server-download")).click();
 
        // Dosyanin basariyla indirildigini test ediniz*/
+        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("server-download"))).click();
         waitForSecond(2);
         Assertions.assertTrue(Files.exists(Paths.get(dosyaYolu)));
     }
